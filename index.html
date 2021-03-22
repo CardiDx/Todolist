@@ -25,48 +25,15 @@
 
         <div class="wrapper-list">
             <h2 class="wrapper-list__title today">Сегодня</h2>
+            <!--Список задач-->
             <ul class="list" id="list-task">
-                <!--                <li class="list-item">-->
-                <!--                    <input type="checkbox" class="custom-checkbox" id="task" name="happy" value="yes">-->
-                <!--                    <label for="task">Задача номер один</label>-->
-                <!--                    <span class="item__priority low">Низкий</span>-->
-                <!--                    <div class="tools__icon">-->
-                <!--                        <span><i class="fas fa-copy"></i></span>-->
-                <!--                        <span><i class="fas fa-pen"></i></span>-->
-                <!--                        <span><i class="fas fa-times"></i></span>-->
-                <!--                    </div>-->
-                <!--                </li>-->
-                <!--                <li class="list-item">-->
-                <!--                    <input type="checkbox" class="custom-checkbox" id="new" name="happy" value="yes">-->
-                <!--                    <label for="new">Задача номер два</label>-->
-                <!--                    <span class="item__priority very-high">Высокий</span>-->
-                <!--                    <div class="tools__icon">-->
-                <!--                        <span><i class="fas fa-copy"></i></span>-->
-                <!--                        <span><i class="fas fa-pen"></i></span>-->
-                <!--                        <span><i class="fas fa-times"></i></span>-->
-                <!--                    </div>-->
-                <!--                </li>-->
-                <!--                <li class="list-item">-->
-                <!--                    <input type="checkbox" class="custom-checkbox" id="tet" name="happy" value="yes">-->
-                <!--                    <label for="tet">Задача номер один</label>-->
-                <!--                    <span class="item__priority high">Средний</span>-->
-                <!--                    <div class="tools__icon">-->
-                <!--                        <span><i class="fas fa-copy"></i></span>-->
-                <!--                        <span><i class="fas fa-pen"></i></span>-->
-                <!--                        <span><i class="fas fa-times"></i></span>-->
-                <!--                    </div>-->
-                <!--                </li>-->
             </ul>
             <a class="wrapper-list__btn btn-default" id="add-btn">Add task<i class="btn-icon fas fa-plus"></i></a>
         </div>
 
-        <!--        style="display: none"-->
-
         <div class="tomorrow">
             <h2 class="wrapper-list__title today " style="margin-top: 100px">Завтра</h2>
         </div>
-
-
     </div>
 </div>
 
@@ -86,39 +53,35 @@
     </div>
 </div>
 
-<footer>
-    <div class="footer-bg">
-        <svg class="footer-bg__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34"
-             preserveAspectRatio="none"
-             fill="#f2f6fc">
-            <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
-        </svg>
-        <h3 class="footer__title">Contacts</h3>
-        <div class="container">
-            <div class="cards-soc">
-                <div class="card">
-                    <div class="wrap-icon">
-                        <span class="card__icon"><i class="fab fa-github" style="font-size: 50px"></i></span>
-                    </div>
-                    <div class="div">
-                        <h4 class="card__title">git hub</h4>
-                        <p class="card__desc">dgsfsdgds</p>
-                    </div>
+<footer class="footer">
+    <svg class="footer__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34"
+         preserveAspectRatio="none"
+         fill="#f2f6fc">
+        <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+    </svg>
+    <h3 class="footer__title">Contacts</h3>
+    <div class="container">
+        <div class="btn-contacts">
+            <a class="btn-contact border border-light" href="https://github.com/CardiDx/Todolist" role="button">
+                <div class="icon">
+                    <i class="fab fa-github" style="color: #fff; font-size: 32px; width: 32px; height: 32px"></i>
                 </div>
-                <div class="card">
-                    <div class="wrap-icon">
-                        <span class="card__icon"><i class="fab fa-instagram" style="font-size: 50px"></i></span>
-                    </div>
-                    <div class="">
-                        <h4 class="card__title">git hub</h4>
-                        <p class="card__desc">dgsfsdgds</p>
-                    </div>
+                <div class="btn-contact-text">
+                    <span class="btn-contact-subtitle">Download on the</span>
+                    <span class="btn-contact-title">Git Hub</span>
                 </div>
-            </div>
+            </a>
+            <a class="btn-contact border border-light" href="https://www.instagram.com/t.philosoph" role="button">
+                <div class="icon">
+                    <i class="fab fa-instagram" style="color: #fff; font-size: 32px; width: 32px; height: 32px"></i>
+                </div>
+                <div class="btn-contact-text">
+                    <span class="btn-contact-subtitle">Subscribe on the</span>
+                    <span class="btn-contact-title">Instagram</span>
+                </div>
+            </a>
         </div>
     </div>
-
-
 </footer>
 
 <script>
@@ -136,7 +99,7 @@
 
     let arrayTask = [];
     //проверка на даные в локал сторидж
-    if (localStorage.arrayTask = []) {
+    if (localStorage.arrayTask === []) {
         arrayTask = JSON.parse(localStorage.getItem('tasks'));
     }
 
